@@ -28,8 +28,7 @@ Bilibili Live AI Assistant 🎤🤖
 1. 克隆仓库
 
 ```bash
-git clone https://github.com/yourname/bilibili-live-ai.git
-cd bilibili-live-ai
+git clone https://github.com/liang-kai-shui/-N.E.K.O-.git
 ```
 
 2. 安装Python依赖
