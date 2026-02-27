@@ -12,15 +12,15 @@ except ImportError:
     HAS_AUDIO = False
     print("⚠️ 未安装 pyaudio，语音播放功能将禁用。如需播放，请安装：pip install pyaudio")
 
-# ========== 配置区（硬编码）==========
-ROOM_ID = 0                 # 你的B站直播间ID
+# ========== 配置区==========
+ROOM_ID = 0                 # 你的B站直播间ID（必要）
 ROLE_NAME = "小天"                   # 你的N.E.K.O.角色名
 WS_URL = f"ws://localhost:48911/ws/{ROLE_NAME}"
 
-SESSDATA = "前往浏览器开发者页面面获取SESSDATA，确保登录状态有效"
-BILI_JCT = "前往浏览器开发者页面面获取bili_jct，确保登录状态有效"
-BUVID3 = "前往浏览器开发者页面面获取BUVID3，确保登录状态有效"
-# ====================================
+SESSDATA = "前往浏览器开发者页面面获取SESSDATA，确保登录状态有效" #非必须
+BILI_JCT = "前往浏览器开发者页面面获取bili_jct，确保登录状态有效" #非必须
+BUVID3 = "前往浏览器开发者页面面获取BUVID3，确保登录状态有效" #非必须
+# ================以下就不要动了====================
 
 class AudioPlayer:
     """独立音频播放器，支持重置以彻底清除旧语音"""
@@ -357,4 +357,5 @@ async def main():
         ai.audio_player.stop()
 
 if __name__ == "__main__":
+
     asyncio.run(main())
